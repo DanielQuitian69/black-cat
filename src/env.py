@@ -6,6 +6,12 @@ import os
 env_path = Path('.') / '.env'
 load_dotenv(dotenv_path=env_path)
 
+"""
+Function responsible for obtaining and validating the application's environment configurations
+Returns:
+  Application environment settings. I.e,
+  { 'GENERAL_CONFIG': { 'version': '1.0.0' } }
+"""
 def getEnvironmentConfig():
   envars = ['GENERAL_CONFIG', 'SLACK_CONFIG']
   env_config = {}
