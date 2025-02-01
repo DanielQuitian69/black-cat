@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from src.api.index_routes import router
+from src.api.routes.index_routes import router
 
 class ApiServerLoader:
 

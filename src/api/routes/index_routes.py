@@ -1,5 +1,6 @@
 from fastapi import APIRouter
 from src.env import env
+from src.api.routes.slack_routes import slack_router
 
 router = APIRouter()
 
@@ -16,3 +17,5 @@ def health_check():
     "status": "healthy",
     "version": env['GENERAL_CONFIG']['version']
   }
+
+router.include_router(slack_router, prefix='/slack', tags=['slack'])
